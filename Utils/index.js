@@ -1,4 +1,4 @@
-import checkPropTypes from "./node_modules/check-prop-types";
+import checkPropTypes from "check-prop-types";
 
 export const findByTestAtrr = (component, attr) => {
   const wrapper = component.find(`[data-test="${attr}"]`);
@@ -10,6 +10,7 @@ export const checkProps = (component, expectedProps) => {
     component.propTypes,
     expectedProps,
     "props",
+
     component.name
   );
   return propsErr;
